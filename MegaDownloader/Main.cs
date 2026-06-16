@@ -2071,79 +2071,80 @@ public class Main : Form
 
 	private void CrearMenus()
 	{
-		base.Menu = new MainMenu();
-		MenuItem menuItem = base.Menu.MenuItems.Add(Language.GetText("&File"));
-		MenuItem menuItem2 = new MenuItem(Language.GetText("Open &DLC"));
+		base.MainMenuStrip = new MenuStrip();
+		base.Controls.Add(base.MainMenuStrip);
+		ToolStripMenuItem menuItem = (ToolStripMenuItem)base.MainMenuStrip.Items.Add(Language.GetText("&File"));
+		ToolStripMenuItem menuItem2 = new ToolStripMenuItem(Language.GetText("Open &DLC"));
 		menuItem2.Click += OpenDLC_Click;
-		MenuItem menuItem3 = new MenuItem(Language.GetText("E&xit"));
+		ToolStripMenuItem menuItem3 = new ToolStripMenuItem(Language.GetText("E&xit"));
 		menuItem3.Click += CerrarToolStripMenuItem_Click;
-		menuItem.MenuItems.Add(menuItem2);
-		menuItem.MenuItems.Add("-");
-		menuItem.MenuItems.Add(menuItem3);
-		MenuItem menuItem4 = new MenuItem(Language.GetText("See extraction &queue"));
+		menuItem.DropDownItems.Add(menuItem2);
+		menuItem.DropDownItems.Add(new ToolStripSeparator());
+		menuItem.DropDownItems.Add(menuItem3);
+		ToolStripMenuItem menuItem4 = new ToolStripMenuItem(Language.GetText("See extraction &queue"));
 		menuItem4.Click += VerDescompresor_Click;
-		MenuItem menuItem5 = new MenuItem(Language.GetText("&Configuration"));
+		ToolStripMenuItem menuItem5 = new ToolStripMenuItem(Language.GetText("&Configuration"));
 		menuItem5.Click += btnConfig_Click;
-		MenuItem menuItem6 = new MenuItem(Language.GetText("See lo&gs"));
+		ToolStripMenuItem menuItem6 = new ToolStripMenuItem(Language.GetText("See lo&gs"));
 		menuItem6.Click += VerLogs_Click;
-		MenuItem menuItem7 = new MenuItem(Language.GetText("Encode lin&ks"));
+		ToolStripMenuItem menuItem7 = new ToolStripMenuItem(Language.GetText("Encode lin&ks"));
 		menuItem7.Click += CodificarEnlaces_Click;
-		MenuItem menuItem8 = new MenuItem(Language.GetText("Generat&e ELC"));
+		ToolStripMenuItem menuItem8 = new ToolStripMenuItem(Language.GetText("Generat&e ELC"));
 		menuItem8.Click += GenerateELC_Click;
-		MenuItem menuItem9 = new MenuItem(Language.GetText("Steganograph&y"));
-		MenuItem menuItem10 = base.Menu.MenuItems.Add(Language.GetText("&Options"));
+		ToolStripMenuItem menuItem9 = new ToolStripMenuItem(Language.GetText("Steganograph&y"));
+		ToolStripMenuItem menuItem10 = (ToolStripMenuItem)base.MainMenuStrip.Items.Add(Language.GetText("&Options"));
 		List<KeyValuePair<string, string>> list = InternalConfiguration.ObtenerValuesFromInternalConfig("SEARCH_LIST/ELEMENT");
 		if (list.Count > 0)
 		{
-			MenuItem menuItem11 = menuItem10.MenuItems.Add(Language.GetText("Searc&h"));
-			menuItem10.MenuItems.Add("-");
+			ToolStripMenuItem menuItem11 = (ToolStripMenuItem)menuItem10.DropDownItems.Add(Language.GetText("Searc&h"));
+			menuItem10.DropDownItems.Add(new ToolStripSeparator());
 			foreach (KeyValuePair<string, string> item in list)
 			{
-				MenuItem menuItem12 = new MenuItem(item.Key);
+				ToolStripMenuItem menuItem12 = new ToolStripMenuItem(item.Key);
 				menuItem12.Click += Buscador_Click;
-				menuItem11.MenuItems.Add(menuItem12);
+				menuItem11.DropDownItems.Add(menuItem12);
 			}
 		}
-		menuItem10.MenuItems.Add(menuItem7);
-		menuItem10.MenuItems.Add(menuItem8);
-		menuItem10.MenuItems.Add(menuItem9);
-		menuItem10.MenuItems.Add("-");
-		menuItem10.MenuItems.Add(menuItem4);
-		menuItem10.MenuItems.Add(menuItem6);
-		menuItem10.MenuItems.Add("-");
-		menuItem10.MenuItems.Add(menuItem5);
-		MenuItem menuItem13 = new MenuItem(Language.GetText("&Hide links inside an image"));
+		menuItem10.DropDownItems.Add(menuItem7);
+		menuItem10.DropDownItems.Add(menuItem8);
+		menuItem10.DropDownItems.Add(menuItem9);
+		menuItem10.DropDownItems.Add(new ToolStripSeparator());
+		menuItem10.DropDownItems.Add(menuItem4);
+		menuItem10.DropDownItems.Add(menuItem6);
+		menuItem10.DropDownItems.Add(new ToolStripSeparator());
+		menuItem10.DropDownItems.Add(menuItem5);
+		ToolStripMenuItem menuItem13 = new ToolStripMenuItem(Language.GetText("&Hide links inside an image"));
 		menuItem13.Click += CreateStegano_Click;
-		MenuItem menuItem14 = new MenuItem(Language.GetText("&Retrieve links from an image"));
+		ToolStripMenuItem menuItem14 = new ToolStripMenuItem(Language.GetText("&Retrieve links from an image"));
 		menuItem14.Click += UseStegano_Click;
-		menuItem9.MenuItems.Add(menuItem13);
-		menuItem9.MenuItems.Add(menuItem14);
-		MenuItem menuItem15 = new MenuItem(Language.GetText("Watch &Online"));
+		menuItem9.DropDownItems.Add(menuItem13);
+		menuItem9.DropDownItems.Add(menuItem14);
+		ToolStripMenuItem menuItem15 = new ToolStripMenuItem(Language.GetText("Watch &Online"));
 		menuItem15.Click += VerStreaming_Click;
-		MenuItem menuItem16 = new MenuItem(Language.GetText("Manage Streaming &Library"));
+		ToolStripMenuItem menuItem16 = new ToolStripMenuItem(Language.GetText("Manage Streaming &Library"));
 		menuItem16.Click += LibraryManager_Click;
-		MenuItem menuItem17 = new MenuItem(Language.GetText("See Streaming &Library"));
+		ToolStripMenuItem menuItem17 = new ToolStripMenuItem(Language.GetText("See Streaming &Library"));
 		menuItem17.Click += SeeLibraryManager_Click;
-		MenuItem menuItem18 = base.Menu.MenuItems.Add(Language.GetText("&Streaming"));
-		menuItem18.MenuItems.Add(menuItem15);
-		menuItem18.MenuItems.Add("-");
-		menuItem18.MenuItems.Add(menuItem17);
-		menuItem18.MenuItems.Add(menuItem16);
-		MenuItem menuItem19 = new MenuItem(Language.GetText("FA&Q"));
+		ToolStripMenuItem menuItem18 = (ToolStripMenuItem)base.MainMenuStrip.Items.Add(Language.GetText("&Streaming"));
+		menuItem18.DropDownItems.Add(menuItem15);
+		menuItem18.DropDownItems.Add(new ToolStripSeparator());
+		menuItem18.DropDownItems.Add(menuItem17);
+		menuItem18.DropDownItems.Add(menuItem16);
+		ToolStripMenuItem menuItem19 = new ToolStripMenuItem(Language.GetText("FA&Q"));
 		menuItem19.Click += FAQ_Click;
-		MenuItem menuItem20 = new MenuItem(Language.GetText("Get MegaUploa&der"));
+		ToolStripMenuItem menuItem20 = new ToolStripMenuItem(Language.GetText("Get MegaUploa&der"));
 		menuItem20.Click += GetMegaUploader_Click;
-		MenuItem menuItem21 = new MenuItem(Language.GetText("&About"));
+		ToolStripMenuItem menuItem21 = new ToolStripMenuItem(Language.GetText("&About"));
 		menuItem21.Click += About_Click;
-		MenuItem menuItem22 = new MenuItem(Language.GetText("Chec&k for updates"));
+		ToolStripMenuItem menuItem22 = new ToolStripMenuItem(Language.GetText("Chec&k for updates"));
 		menuItem22.Click += CheckUpdates_Click;
-		MenuItem menuItem23 = base.Menu.MenuItems.Add(Language.GetText("&Help"));
-		menuItem23.MenuItems.Add(menuItem22);
-		menuItem23.MenuItems.Add("-");
-		menuItem23.MenuItems.Add(menuItem19);
-		menuItem23.MenuItems.Add(menuItem20);
-		menuItem23.MenuItems.Add("-");
-		menuItem23.MenuItems.Add(menuItem21);
+		ToolStripMenuItem menuItem23 = (ToolStripMenuItem)base.MainMenuStrip.Items.Add(Language.GetText("&Help"));
+		menuItem23.DropDownItems.Add(menuItem22);
+		menuItem23.DropDownItems.Add(new ToolStripSeparator());
+		menuItem23.DropDownItems.Add(menuItem19);
+		menuItem23.DropDownItems.Add(menuItem20);
+		menuItem23.DropDownItems.Add(new ToolStripSeparator());
+		menuItem23.DropDownItems.Add(menuItem21);
 	}
 
 	private void InicializarMonitores()
@@ -4189,7 +4190,7 @@ public class Main : Form
 
 	private void Buscador_Click(object sender, EventArgs e)
 	{
-		string right = ((MenuItem)sender).Text;
+		string right = ((ToolStripMenuItem)sender).Text;
 		Process.Start((from n in InternalConfiguration.ObtenerValuesFromInternalConfig("SEARCH_LIST/ELEMENT")
 			where Operators.CompareString(n.Key, right, TextCompare: false) == 0
 			select n).FirstOrDefault().Value);
