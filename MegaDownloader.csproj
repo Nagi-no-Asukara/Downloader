@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>MegaDownloader</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Nullable>disable</Nullable>
+    <NoWarn>SYSLIB0003;CA2022;CS0649;WFO1000</NoWarn>
+    <EnableWindowsFormsSourceGen>false</EnableWindowsFormsSourceGen>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
+    <PackageReference Include="System.Management" Version="10.0.0-preview.2.25163.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>MegaDownloader.BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="F5Lib">
+      <HintPath>MegaDownloader.F5Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Fadd">
+      <HintPath>MegaDownloader.Fadd.dll</HintPath>
+    </Reference>
+    <Reference Include="HttpServer">
+      <HintPath>MegaDownloader.HttpServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>MegaDownloader.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>MegaDownloader.ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress">
+      <HintPath>MegaDownloader.SharpCompress.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MegaDownloader.BouncyCastle.Crypto.dll" />
+    <EmbeddedResource Include="MegaDownloader.F5Lib.dll" />
+    <EmbeddedResource Include="MegaDownloader.Fadd.dll" />
+    <EmbeddedResource Include="MegaDownloader.HttpServer.dll" />
+    <EmbeddedResource Include="MegaDownloader.ObjectListView.dll" />
+    <EmbeddedResource Include="MegaDownloader.Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="MegaDownloader.SharpCompress.dll" />
+  </ItemGroup>
+</Project>
