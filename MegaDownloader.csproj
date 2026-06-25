@@ -46,12 +46,37 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="MegaDownloader.BouncyCastle.Crypto.dll" />
-    <EmbeddedResource Include="MegaDownloader.F5Lib.dll" />
-    <EmbeddedResource Include="MegaDownloader.Fadd.dll" />
-    <EmbeddedResource Include="MegaDownloader.HttpServer.dll" />
-    <EmbeddedResource Include="MegaDownloader.ObjectListView.dll" />
-    <EmbeddedResource Include="MegaDownloader.Newtonsoft.Json.dll" />
-    <EmbeddedResource Include="MegaDownloader.SharpCompress.dll" />
+    <EmbeddedResource Include="MegaDownloader.BouncyCastle.Crypto.dll" LogicalName="MegaDownloader.BouncyCastle.Crypto.dll" />
+    <EmbeddedResource Include="MegaDownloader.F5Lib.dll" LogicalName="MegaDownloader.F5Lib.dll" />
+    <EmbeddedResource Include="MegaDownloader.Fadd.dll" LogicalName="MegaDownloader.Fadd.dll" />
+    <EmbeddedResource Include="MegaDownloader.HttpServer.dll" LogicalName="MegaDownloader.HttpServer.dll" />
+    <EmbeddedResource Include="MegaDownloader.ObjectListView.dll" LogicalName="MegaDownloader.ObjectListView.dll" />
+    <EmbeddedResource Include="MegaDownloader.Newtonsoft.Json.dll" LogicalName="MegaDownloader.Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="MegaDownloader.SharpCompress.dll" LogicalName="MegaDownloader.SharpCompress.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MegaDownloader.InternalConfig.xml" LogicalName="MegaDownloader.InternalConfig.xml" />
+    <EmbeddedResource Include="MegaDownloader.XmlTemplateData.xml" LogicalName="MegaDownloader.XmlTemplateData.xml" />
+    <EmbeddedResource Include="MegaDownloader.hu-HU-Language.xml" LogicalName="MegaDownloader.hu-HU-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.en-US-Language.xml" LogicalName="MegaDownloader.en-US-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.es-ES-Language.xml" LogicalName="MegaDownloader.es-ES-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.fr-FR-Language.xml" LogicalName="MegaDownloader.fr-FR-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.zh-TW-Language.xml" LogicalName="MegaDownloader.zh-TW-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.it-IT-Language.xml" LogicalName="MegaDownloader.it-IT-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.de-DE-Language.xml" LogicalName="MegaDownloader.de-DE-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.pt-BR-Language.xml" LogicalName="MegaDownloader.pt-BR-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.ro-RO-Language.xml" LogicalName="MegaDownloader.ro-RO-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.zh-CN-Language.xml" LogicalName="MegaDownloader.zh-CN-Language.xml" />
+    <EmbeddedResource Include="MegaDownloader.addlink.png" LogicalName="MegaDownloader.addlink.png" />
+    <EmbeddedResource Include="MegaDownloader.config.png" LogicalName="MegaDownloader.config.png" />
+    <EmbeddedResource Include="MegaDownloader.pause.png" LogicalName="MegaDownloader.pause.png" />
+    <EmbeddedResource Include="MegaDownloader.play.png" LogicalName="MegaDownloader.play.png" />
+    <EmbeddedResource Include="MegaDownloader.stop.png" LogicalName="MegaDownloader.stop.png" />
+    <EmbeddedResource Include="MegaDownloader.download.png" LogicalName="MegaDownloader.download.png" />
+    <EmbeddedResource Include="MegaDownloader.collaborate.png" LogicalName="MegaDownloader.collaborate.png" />
+    <EmbeddedResource Include="MegaDownloader.StreamingLibraryManagerTemplateData.htm" LogicalName="MegaDownloader.StreamingLibraryManagerTemplateData.htm" />
+    <EmbeddedResource Include="MegaDownloader.StreamingLibraryTemplateData.htm" LogicalName="MegaDownloader.StreamingLibraryTemplateData.htm" />
+    <EmbeddedResource Include="MegaDownloader.StreamingLibraryTemplateLogin.htm" LogicalName="MegaDownloader.StreamingLibraryTemplateLogin.htm" />
   </ItemGroup>
 </Project>
